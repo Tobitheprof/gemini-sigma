@@ -1,5 +1,6 @@
 services:
   - name: gemini-gradio
     type: web
+    runtime: python3.8
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn -c gunicorn_config.py app:app
